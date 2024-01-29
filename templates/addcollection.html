@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Collection
+{% endblock %}
+
+{% block body %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, msg in messages %}
+                <p class="{{ category }}">{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <div>
+        <form action="/addcollection" method="post">
+            <textarea class="flashcard_title" placeholder="Collection Name" name="name_collection"></textarea>
+            <a class="create_collection" href="#"><button>Create Collection</button></a>
+        </form>
+    </div>
+{% endblock %}

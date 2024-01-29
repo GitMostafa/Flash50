@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block body %}
+    {% for value in collections_info %}
+        <div class="card" style="width: 18rem;">
+            <img src="/static/note-taking.png" class="card-img-top" alt="Note">
+            <div class="card-body">
+                <form action="{{ url_for('view_collection', collection_name=value[1]) }}" method="post">
+                    <a class="card-title" href="#"><button>{{ value[1] }}</button></a>
+                </form>
+                <h3 class="card-text">{{ value[3] }} cards</h3>
+                <form action="{{ url_for('delete_collection', collection_name=value[1]) }}" method="post">
+                    <a href="#" class="delete_button"><button>Delete Collection</button></a>
+                </form>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

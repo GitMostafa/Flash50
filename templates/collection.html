@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Collection: {{ collection_name }}
+{% endblock %}
+
+{% block body %}    
+    <div>
+        <form action="{{ url_for('add_card', collection_name=collection_name) }}" method="post">
+            <textarea class="flashcard_title" placeholder="Card Title" name="title_card"></textarea>
+            <textarea class="flashcard_content" placeholder="FlashCard Content" name="content_card"></textarea>
+            <a class="create_card" href="#"><button>Create Card</button></a>
+        </form>
+    </div>
+    <!-- No Cards in the collection -->
+    {% if collections_info[0][3] == 0 %}
+        <h3 class="card_counter"> No cards in the collection yet</h3>
+
+    <!-- Cards Exist already -->
+    {% else %}
+        {% for value in cards_info %}
+            <div class="collection_card" style="width: 25rem;">
+                <div class="card-body">
+                    <form action="{{ url_for('delete_card', collection_name=collection_name, title_card=value[3]) }}" method="post">
+                        <button class="btn-close"></button>
+                    </form>
+                    <h1 class="collection_card_title">{{ value[3] }}</h1>
+                </div>
+                <h3 class="collection_card_text">{{ value[4] }}</h3>
+                <img src="/static/collection_card_logo2.png" alt="Collection Logo" class="collection_logo">
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, msg in messages %}
+                <p class="{{ category }}">{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+{% endblock %}

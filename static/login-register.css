@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+    background: #24252A; /* fallback for old browsers */
+    overflow-x: hidden;
+  
+    height: 100%;
+  
+    /* code to make all text unselectable */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  
+  /* Disables selector ring */
+  body:not(.user-is-tabbing) button:focus,
+  body:not(.user-is-tabbing) input:focus,
+  body:not(.user-is-tabbing) select:focus,
+  body:not(.user-is-tabbing) textarea:focus {
+    outline: none;
+  }
+  
+  /* ########################################################## */
+  
+  h1 {
+    color: white;
+  
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+  .flex-container {
+    width: 100vw;
+  
+    margin-top: 60px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content-container {
+    width: 500px;
+    height: 370px;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 500px;
+    height: 410px;
+  
+    margin-top: 5px;
+    padding-top: 20px;
+  
+    border-radius: 12px;
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+    background: #1f1f1f;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.199);
+  }
+  
+  .subtitle {
+    font-size: 11px;
+  
+    color: rgba(177, 177, 177, 0.3);
+  }
+  
+  input {
+    border: none;
+    border-bottom: solid rgb(143, 143, 143) 1px;
+  
+    margin-bottom: 30px;
+  
+    background: none;
+    color: rgba(255, 255, 255, 0.555);
+  
+    height: 35px;
+    width: 300px;
+  }
+  
+  .submit-btn {
+    cursor: pointer;
+  
+    border: none;
+    border-radius: 8px;
+  
+    box-shadow: 2px 2px 7px rgba(0, 136, 169, 0.3);
+  
+    background: rgba(0, 136, 169, 1);
+    color: rgba(255, 255, 255, 0.8);
+  
+    width: 80px;
+    
+    transition: all 1s;
+  }
+  
+  .submit-btn:hover {
+    color: rgb(255, 255, 255);
+  
+    box-shadow: none;
+  }
+  
+  .logo_login {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+    position: absolute;
+    top: 60px;
+    left: 150px;
+    font-size: 50px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .logo_login:hover {
+    color: #0088a9;
+  }
+
+  .logo_login_image {
+    height: 70px;
+    width: 60px;
+    position: absolute;
+    top: 55px;
+    left: 94px;
+  }
+
+  .login-title {
+    position: absolute;
+    top: 75px;
+    left: 725px;
+  }
+
+  .login_text a {
+    color:aqua;
+  }
+
+  .login_text {
+    width: 280px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: rgba(233, 233, 233, 0);
+    color: #edf0f1;
+    text-decoration: none;
+    position: relative;
+    left: 0px;
+  }
+
+
+  .register-title {
+    position: absolute;
+    top: 75px;
+    left: 705px;
+  }
+
+  .register_text {
+    width: 280px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: rgba(233, 233, 233, 0);
+    color: #edf0f1;
+    text-decoration: none;
+    position: relative;
+    left: 0px;
+  }
+
+  .register_text a {
+    color:aqua;
+  }
+
+  .small_popup {
+    width: 550px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: rgba(233, 233, 233, 0);
+    color: #edf0f1;
+    text-decoration: none;
+    position: absolute;
+    left: 650px;
+    top: 660px;
+  }
+
+  .big_popup {
+    width: 550px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: rgba(233, 233, 233, 0);
+    color: #edf0f1;
+    text-decoration: none;
+    position: absolute;
+    left: 600px;
+    top: 660px;
+  }
+
+  .huge_popup {
+    width: 550px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    background-color: rgba(233, 233, 233, 0);
+    color: #edf0f1;
+    text-decoration: none;
+    position: absolute;
+    left: 590px;
+    top: 660px;
+  }
+
+
+  .register-btn {
+    cursor: pointer;
+
+    position: fixed;
+    border: none;
+    border-radius: 8px;
+
+    box-shadow: 2px 2px 7px rgba(0, 136, 169, 0.3);
+
+    background: rgba(0, 136, 169, 1);
+    color: rgba(255, 255, 255, 0.8);
+
+    width: 80px;
+    
+    top: 390px;
+
+    transition: all 1s;
+  }
+
+  .register-btn:hover {
+    color: rgb(255, 255, 255);
+
+    box-shadow: none;
+  }
